@@ -1,6 +1,6 @@
 import hashlib
 import json
-import os
+import os 
 import sys
 
 BASELINE_FILE = "baseline.json"
@@ -20,8 +20,7 @@ def gerar_baseline():
   if not os.path.exists(MONITOR_DIR):
     os.makedirs(MONITOR_DIR)
     print(
-        f"Diretório '{MONITOR_DIR}' criado. Adicione arquivos nele e rode a"
-        " baseline novamente."
+        f"Diretório '{MONITOR_DIR}' criado. Adicione arquivos nele e inicie a baseline novamente."
     )
     return
 
@@ -42,7 +41,7 @@ def gerar_baseline():
 
 def verificar_integridade():
   if not os.path.exists(BASELINE_FILE):
-    print("Baseline não encontrada. Execute 'python monitor.py init' primeiro.")
+    print("Baseline não encontrada. Execute 'python codigo.py init' primeiro ou reveja seu caminho.")
     return
 
   with open(BASELINE_FILE, "r") as f:
